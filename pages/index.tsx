@@ -13,7 +13,7 @@ import {
 
 const Home: NextPage = () => {
     return (
-        <section className="w-screen h-screen flex flex-col items-center justify-center space-y-8">
+        <section className="container h-screen flex flex-col items-center justify-center space-y-8">
             <Head>
                 <title>My Design Pattern</title>
             </Head>
@@ -26,25 +26,9 @@ const Home: NextPage = () => {
 
             <div className="grid grid-cols-3 gap-4">
                 <Article
-                    title="Data Fetching"
-                    icon={<FaGlobeAmericas />}
-                    link="/data-fetch/"
-                />
-                <Article
-                    title="Authentication"
-                    icon={<FaLock />}
-                    link="/authentication/"
-                />
-                <Article title="Layout" icon={<FaPalette />} link="/layouts/" />
-                <Article
                     title="Components"
                     icon={<FaFolder />}
                     link="/components/"
-                />
-                <Article
-                    title="Validation"
-                    icon={<FaFilter />}
-                    link="/validation/"
                 />
             </div>
         </section>

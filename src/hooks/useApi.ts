@@ -38,7 +38,7 @@ const useApi = <Data>(
         swrConfig
     )
 
-    return { data, isError: error, isLoading: !error && !data, mutate }
+    return { data, error, isLoading: !error && !data, mutate }
 }
 
 export default useApi
