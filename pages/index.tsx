@@ -1,17 +1,11 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import Article from 'components/home/article'
 
-import {
-    FaFilter,
-    FaFolder,
-    FaGlobeAmericas,
-    FaLock,
-    FaPalette
-} from 'react-icons/fa'
+import type { NextCustomPage } from 'next'
+import { FaFolder } from 'react-icons/fa'
 
-const Home: NextPage = () => {
+const Home: NextCustomPage = () => {
     return (
         <section className="container h-screen flex flex-col items-center justify-center space-y-8">
             <Head>

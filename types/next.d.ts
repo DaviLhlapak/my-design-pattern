@@ -1,16 +1,9 @@
-import {
-    NextComponentType,
-    NextPageContext,
-    NextLayoutComponentType
-} from 'next'
 import type { AppProps } from 'next/app'
 
+import { NextComponentType, NextPageContext, NextCustomPage } from 'next'
+
 declare module 'next' {
-    type NextLayoutComponentType<P = {}> = NextComponentType<
-        NextPageContext,
-        any,
-        P
-    > & {
+    type NextCustomPage<P = {}> = NextComponentType<NextPageContext, any, P> & {
         config?: {
             disableLayout?: boolean
         }
@@ -18,7 +11,7 @@ declare module 'next' {
 }
 
 declare module 'next/app' {
-    type AppLayoutProps<P = {}> = AppProps & {
-        Component: NextLayoutComponentType
+    type AppCustomProps<P = {}> = AppProps & {
+        Component: NextCustomPage
     }
 }

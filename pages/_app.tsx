@@ -1,13 +1,20 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppCustomProps } from 'next/app'
 
 import Layout from 'components/layout'
 
-function CustomApp({ Component, pageProps }: AppProps) {
+import { SessionProvider } from 'next-auth/react'
+
+function CustomApp({
+    Component,
+    pageProps: { session, ...pageProps }
+}: AppCustomProps) {
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <SessionProvider session={session}>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </SessionProvider>
     )
 }
 

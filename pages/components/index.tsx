@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
+import type { NextCustomPage } from 'next'
 import Head from 'next/head'
 
-const Components: NextPage = () => {
+const Components: NextCustomPage = () => {
     return (
         <article className="container h-screen flex flex-col items-center justify-center space-y-8">
             <Head>
