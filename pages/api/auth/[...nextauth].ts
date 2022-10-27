@@ -21,6 +21,7 @@ export default NextAuth({
                     throw new Error('Empty credentials')
 
                 return {
+                    id: '1',
                     name: 'Exemplo',
                     email: 'exemplo@exemplo.com',
                     accessToken: 'token'
