@@ -1,9 +1,8 @@
 import Article from 'components/home/article'
 
-import type { NextCustomPage } from 'next'
 import { FaFolder } from 'react-icons/fa'
 
-const Home: NextCustomPage = () => {
+const Home = () => {
     return (
         <section className="container h-screen flex flex-col items-center justify-center space-y-8">
             <header>
